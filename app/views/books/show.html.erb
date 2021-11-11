@@ -1,0 +1,7 @@
+<ul>
+	<li> Title: <%= @book.title %> </li>
+	<li> Pages: <%= @book.pages %> Pages </li>
+	<li> Price: IDR <%= @book.price %> </li>
+	<li> Description: <%= @book.description %> </li>
+</ul>
+<%= render 'info', penulis_buku: @book.author_id %>

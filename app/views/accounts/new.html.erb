@@ -1,0 +1,21 @@
+<%= form_for @user, url: accounts_path do |f| %>
+	<%= f.label :name %> <br>
+	<%= f.text_field :name %> <br>
+	<% if @user.errors[:name].any? %>
+		<%= @user.errors[:name].first %>
+	<% end %>
+
+	<%= f.label :username %> <br>
+	<%= f.text_field :username %> <br>
+	<% if @user.errors[:username].any? %>
+		<%= @user.errors[:username].first %>
+	<% end %>
+
+	<%= f.label :password %> <br>
+	<%= f.password_field :password %> <br>
+	<% if @user.errors[:paswoord].any? %>
+		<%= @user.errors[:paswoord].first %>
+	<% end %>
+
+	<%= f.submit 'Submit' %>
+<% end %>
